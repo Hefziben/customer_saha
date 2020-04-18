@@ -1,0 +1,78 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-googleplus": {
+      "PLAY_SERVICES_VERSION": "11.8.0",
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "call-number": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-telerik-imagepicker": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-firebase-lib": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-market": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.yourpackagename"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.yourpackagename"
+    }
+  }
+}

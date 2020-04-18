@@ -1,0 +1,40 @@
+<ion-header>
+	<ion-navbar>
+		<!--		<ion-title>{{title}}</ion-title>-->
+		<ion-title>{{'manage_address' | translate}}</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+	<!--    <img src="../../assets/imgs/19.png">-->
+	<h2 class="d-flex">{{'saved_address' | translate}}</h2>
+	<div class="empty-view" *ngIf="!isLoading && (!addresses || !addresses.length)">
+		<div style="text-align:center">
+			<img src="assets/imgs/empty_address.png" alt="no offers" />
+			<span style="color:#9E9E9E; font-weight:bold;">
+				{{'no_addresses_to_show' | translate}}
+			</span>
+		</div>
+	</div>
+	<ion-list no-lines radio-group [(ngModel)]="address_id" name="case" required (ionChange)="onEditClick()">
+		<ion-item *ngFor="let address of addresses">
+			<ion-radio item-start value="{{address.id}}"></ion-radio>
+			<ion-label>
+				<h3>{{address.title}}</h3>
+				<p class="text-grey">
+					{{address.address}}
+				</p>
+			</ion-label>
+			<ion-icon *ngIf="edit" name="md-create" item-end></ion-icon>
+		</ion-item>
+	</ion-list>
+</ion-content>
+<ion-footer>
+	<h2 class="text-thime" text-center (click)="onAddNewClick()">
+		<ion-icon name="md-add-circle" text-start></ion-icon>{{'add_new' | translate}}
+	</h2>
+	<button *ngIf="!edit" class="btn" ion-button full no-margin (click)="bookNow()">
+		<ion-icon name="checkmark-circle" text-start></ion-icon>
+		{{'book_now' | translate}}
+	</button>
+</ion-footer>

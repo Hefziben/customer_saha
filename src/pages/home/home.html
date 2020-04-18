@@ -1,0 +1,39 @@
+<ion-header class="bg-transparent">
+	<ion-navbar>
+		<ion-title>
+			<ion-icon name="pin" class="text-white pin-icon"></ion-icon>
+			<span class="city" style="margin-left: 0 !important;" (click)="checkForLocation(true)">
+				<ion-label class="my_address text-white" *ngIf="selectedLocation">
+					{{'location_for_service' | translate}}<br>{{selectedLocation.name}}
+				</ion-label>
+				<ion-label *ngIf="!selectedLocation" class="text-white">
+					{{'select_location' | translate}}
+				</ion-label>
+			</span>
+		</ion-title>
+	</ion-navbar>
+	<div class="banner">
+		<img src="assets/imgs/banner.jpg">
+		<h1 class="text-white">{{'how_can_we_help_you_today' | translate}}</h1>
+	</div>
+	<div class="d-flex search_box" (click)="searchCats()">
+		<ion-icon name="md-search" text-start></ion-icon>
+		<h2>{{'search_for_service' | translate}}</h2>
+	</div>
+	<!-- <div class="search-box d-flex"></div> -->
+</ion-header>
+
+<ion-content class="bg-light">
+
+
+	<div class="home-menu">
+		<ion-row *ngIf="categories && categories.length">
+			<ion-col *ngFor="let cat of categories" col-4 (click)="subCatPage(cat)">
+				<div class="menu-item">
+					<img data-src="{{cat.image_url}}">
+					<p class="text-ellipsis">{{cat.title}}</p>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

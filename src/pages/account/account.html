@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'account' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <ion-list no-lines>
+        <ion-item class="profile">
+            <ion-avatar item-start (click)="openAction()">
+                <img *ngIf="userMe && userMe.image_url" data-src="{{userMe.image_url}}">
+                <img *ngIf="!userMe || !userMe.image_url" src="assets/imgs/empty_dp.png">
+                <ion-icon name="md-camera"></ion-icon>
+            </ion-avatar>
+            <div (click)="loginIfNot()">
+                <h2>
+                    <span *ngIf="userMe" class="text-ellipsis">
+                        {{userMe.name}}
+                    </span>
+                    <span *ngIf="!userMe" class="text-ellipsis">
+                        {{'hey_guest' | translate}}
+                    </span>
+                </h2>
+                <p *ngIf="userMe" class="text-grey">{{userMe.mobile_number}}</p>
+                <p *ngIf="userMe" class="text-grey">{{userMe.email}}</p>
+                <p *ngIf="!userMe" class="text-grey" [innerHTML]="'alert_login_msg' | translate"></p>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="manageaddress()">
+            <h2>
+                <ion-icon name="ios-pin" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'manage_address' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="contact()">
+            <h2>
+                <ion-icon name="ios-mail" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'contact_us' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="privacy()">
+            <h2>
+                <ion-icon name="md-lock" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'privacy_policy' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="about()">
+            <h2>
+                <ion-icon class="mr-auto text-thime">
+                    <img src="assets/imgs/about-icon.png">
+                </ion-icon>
+                <span class="text-ellipsis">{{'about_us' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="faqs()">
+            <h2>
+                <ion-icon class="mr-auto text-thime">
+                    <img src="assets/imgs/faqs-icon.png">
+                </ion-icon>
+                <span class="text-ellipsis">{{'faq' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="shareApp()">
+            <h2>
+                <ion-icon name="share" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'share' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="chooseLanguage()">
+            <h2>
+                <ion-icon name="md-globe" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'change_language' | translate}}</span>
+            </h2>
+        </ion-item>
+    </ion-list>
+    <ion-list no-lines (click)="alertLogout()">
+        <ion-item class="sign-out">
+            <h2 text-center>
+                <strong *ngIf="userMe" class="text-ellipsis text-thime" text-center>
+                    {{'sign_out' | translate}}
+                </strong>
+                <strong *ngIf="!userMe" class="text-ellipsis text-thime" text-center>
+                    {{'sign_in' | translate}}
+                </strong>
+            </h2>
+        </ion-item>
+    </ion-list>
+</ion-content>
