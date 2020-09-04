@@ -57,7 +57,7 @@
     "cordova-plugin-firebase-lib": "3.3.0",
     "cordova-plugin-geolocation": "4.0.1",
     "cordova-plugin-googleplus": "^6.0.0",
-    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-inappbrowser": "3.1.0",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.19",
     "cordova-plugin-market": "1.2.0",
